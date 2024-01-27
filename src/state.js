@@ -1,4 +1,4 @@
-import { roadGraph } from "./road.js";
+const roadGraph = require("./road.js");
 
 function randomPick(array) {
   let choice = Math.floor(Math.random() * array.length);
@@ -12,7 +12,7 @@ class VillageState {
   }
 
   move(destination) {
-    if (!roadGraph[this.place].includes(destination)) {
+    if (!roadGraph[this.place].hasOwnProperty(destination)) {
       return this;
     } else {
       let parcels = this.parcels
@@ -52,5 +52,5 @@ function runRobot(state, robot, memory) {
   }
 }
 
-export default VillageState;
-export {runRobot};
+exports.VillageState = VillageState;
+exports.runRobot = runRobot;

@@ -1,4 +1,4 @@
-import { buildGraph } from "./graph.js";
+const buildGraph = require("./graph.js");
 
 const roads = [
   "Alice's House-Bob's House",
@@ -18,5 +18,5 @@ const roads = [
 ];
 
 const roadGraph = buildGraph(roads);
-
-export {roadGraph};
+console.log(roadGraph);
+module.exports = roadGraph;

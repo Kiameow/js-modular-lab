@@ -117,8 +117,10 @@ class Animation {
   }
 }
 
-export const runRobotAnimation = function (worldState, robot, robotState) {
+const runRobotAnimation = function (worldState, robot, robotState) {
   if (active && active.timeout != null)
     clearTimeout(active.timeout)
   active = new Animation(worldState, robot, robotState)
 }
+
+module.exports = runRobotAnimation;

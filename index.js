@@ -1,4 +1,4 @@
-import { runRobotAnimation } from "./src/animation.js";
-import { goalOrientedRobot } from "./src/robot.js";
-import VillageState from "./src/state.js";
+const runRobotAnimation = require("./src/animation.js");
+const goalOrientedRobot = require("./src/robot.js").goalOrientedRobot;
+const VillageState = require( "./src/state.js").VillageState;
 runRobotAnimation(VillageState.random(), goalOrientedRobot, []);
